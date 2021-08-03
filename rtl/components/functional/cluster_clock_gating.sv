@@ -16,10 +16,6 @@ module cluster_clock_gating
     output logic clk_o
   );
 
-`ifdef PULP_FPGA_EMUL
-  // no clock gates in FPGA flow
-  assign clk_o = clk_i;
-`else
   logic clk_en;
 
   always_latch
@@ -29,6 +25,5 @@ module cluster_clock_gating
   end
 
   assign clk_o = clk_i & clk_en;
-`endif
 
 endmodule
