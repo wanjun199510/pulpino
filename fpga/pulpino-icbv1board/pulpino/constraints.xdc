@@ -1,4 +1,4 @@
-create_clock -period 5.000 -name clk [get_ports clk]
+create_clock -period 20 -name clk [get_ports clk]
 set_property -dict {PACKAGE_PIN T4 IOSTANDARD LVCMOS15} [get_ports fetch_enable_n]
 set_property PULLDOWN true [get_ports fetch_enable_n]
 set_property -dict {PACKAGE_PIN T3 IOSTANDARD LVCMOS15} [get_ports rst_n]
