@@ -149,7 +149,7 @@ end
 always @ (posedge clk) begin
     if(!rst_n)
         usr_cnt <= 4'd0;
-    else if(usr_cnt < 4'd10)
+    else if(usr_cnt < 4'd4)
         usr_cnt <= usr_cnt + 1'b1;
     else begin
         usr_cnt <= 4'd0;
